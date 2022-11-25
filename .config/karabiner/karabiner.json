@@ -17,15 +17,15 @@
                 },
                 "rules": [
                     {
-                        "description": "\" on shift 2",
+                        "description": "Microsoft \" on shift 2",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 1118,
-                                                "product_id": 2092
+                                                "product_id": 2092,
+                                                "vendor_id": 1118
                                             }
                                         ],
                                         "type": "device_if"
@@ -56,15 +56,15 @@
                         ]
                     },
                     {
-                        "description": "@ on shift quote",
+                        "description": "Microsoft @ on shift quote",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 1118,
-                                                "product_id": 2092
+                                                "product_id": 2092,
+                                                "vendor_id": 1118
                                             }
                                         ],
                                         "type": "device_if"
@@ -95,15 +95,15 @@
                         ]
                     },
                     {
-                        "description": "# on non_us_pound",
+                        "description": "Microsoft # on non_us_pound",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 1118,
-                                                "product_id": 2092
+                                                "product_id": 2092,
+                                                "vendor_id": 1118
                                             }
                                         ],
                                         "type": "device_if"
@@ -112,10 +112,8 @@
                                 "from": {
                                     "key_code": "non_us_pound",
                                     "modifiers": {
-                                        "mandatory": [
-                                        ],
-                                        "optional": [
-                                        ]
+                                        "mandatory": [],
+                                        "optional": []
                                     }
                                 },
                                 "to": [
@@ -132,15 +130,15 @@
                         ]
                     },
                     {
-                        "description": "~ on shift non_us_pound",
+                        "description": "Microsoft ~ on shift non_us_pound",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 1118,
-                                                "product_id": 2092
+                                                "product_id": 2092,
+                                                "vendor_id": 1118
                                             }
                                         ],
                                         "type": "device_if"
@@ -169,8 +167,81 @@
                                 "type": "basic"
                             }
                         ]
-                    }
-
+                    },
+                    {
+                        "description": "Dygma # on shift 3",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 4617,
+                                                "product_id": 8705
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ],
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "left_option"
+                                        ],
+                                        "repeat": true
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Dygma £ on option 3",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 4617,
+                                                "product_id": 8705
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": true
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }                    
                 ]
             },
             "devices": [
@@ -245,6 +316,34 @@
                         "is_pointing_device": true,
                         "product_id": 2094,
                         "vendor_id": 1118
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 8705,
+                        "vendor_id": 4617
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 8705,
+                        "vendor_id": 4617
                     },
                     "ignore": true,
                     "manipulate_caps_lock_led": false,
