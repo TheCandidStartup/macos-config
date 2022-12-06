@@ -176,8 +176,8 @@
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 4617,
-                                                "product_id": 8705
+                                                "product_id": 8705,
+                                                "vendor_id": 4617
                                             }
                                         ],
                                         "type": "device_if"
@@ -213,8 +213,8 @@
                                     {
                                         "identifiers": [
                                             {
-                                                "vendor_id": 4617,
-                                                "product_id": 8705
+                                                "product_id": 8705,
+                                                "vendor_id": 4617
                                             }
                                         ],
                                         "type": "device_if"
@@ -241,7 +241,7 @@
                                 "type": "basic"
                             }
                         ]
-                    }                    
+                    }
                 ]
             },
             "devices": [
@@ -333,7 +333,18 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": [],
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "non_us_backslash"
+                                }
+                            ]
+                        }
+                    ],
                     "treat_as_built_in_keyboard": false
                 },
                 {
